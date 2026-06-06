@@ -11,8 +11,10 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
           <li><a href="#contact">CONTACT</a></li>
         </ul>
         <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-          <button className="neo-theme-toggle" onClick={toggleTheme}>
-            {isDarkMode ? '☀️' : '🌙'}
+          <button className={`neo-slide-toggle ${isDarkMode ? 'toggled' : ''}`} onClick={toggleTheme} aria-label="Toggle Theme">
+            <div className="toggle-thumb">
+              {isDarkMode ? '☀️' : '🌙'}
+            </div>
           </button>
           <a href="/assets/resume.pdf" download="Rohit_Mandal_Resume.pdf" className="neo-nav-btn">RESUME</a>
         </div>

@@ -23,9 +23,7 @@ const Hero = () => {
 
       </div>
 
-      <div className="scroll-indicator">
-        <span className="arrow">&gt;</span> Rohit
-      </div>
+
     </section>
   );
 };
