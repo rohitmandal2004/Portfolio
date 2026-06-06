@@ -1,0 +1,45 @@
+.experience-section {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+}
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 800px;
+}
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.timeline-header h3 {
+  font-size: 1.5rem;
+}
+.duration {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+.company-info {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+.timeline-item p {
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .timeline-header {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}

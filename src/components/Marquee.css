@@ -1,0 +1,40 @@
+.marquee-container {
+  width: 100%;
+  background-color: var(--text-primary);
+  color: var(--accent-color);
+  padding: 1.5rem 0;
+  overflow: hidden;
+  position: relative;
+  border-top: 4px solid var(--text-primary);
+  border-bottom: 4px solid var(--text-primary);
+  display: flex;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: flex;
+  animation: scrollMarquee 15s linear infinite;
+}
+
+.marquee-text {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.5rem;
+  padding-right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+@keyframes scrollMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .marquee-text { font-size: 1.8rem; }
+}
