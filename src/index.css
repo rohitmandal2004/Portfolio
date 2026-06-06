@@ -10,12 +10,28 @@
 }
 
 body.dark-theme {
-  --bg-color: #111111;
-  --text-primary: #f5f5f5;
-  --text-secondary: #aaaaaa;
+  --bg-color: #0d1117;
+  --text-primary: #e6edf3;
+  --text-secondary: #7d8590;
   --accent-color: #fdb913;
-  --border-color: #333333;
-  --card-bg: #1f1f1f;
+  --border-color: #30363d;
+  --card-bg: #161b22;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+  border-left: 2px solid var(--border-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-color);
 }
 
 ::selection {

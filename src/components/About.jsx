@@ -1,5 +1,5 @@
 import './About.css';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageSquare } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const About = () => {
@@ -21,9 +21,8 @@ const About = () => {
             </div>
             
             <div className="contact-card">
-              <div className="qr-placeholder">
-                {/* Fake QR Code */}
-                <div className="qr-squares"></div>
+              <div className="qr-placeholder" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--accent-color)' }}>
+                <MessageSquare size={32} color="var(--bg-color)" />
               </div>
               <div className="contact-info">
                 <h3>Let's Work Together :</h3>
@@ -37,7 +36,7 @@ const About = () => {
                   <a href="https://www.linkedin.com/in/mandal-rohit/" target="_blank" rel="noopener noreferrer" className="social-btn linkedin-btn" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
                     <FaLinkedin size={18} /> LinkedIn
                   </a>
-                  <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="social-btn instagram-btn" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
+                  <a href="https://www.instagram.com/i.am.rohit18/" target="_blank" rel="noopener noreferrer" className="social-btn instagram-btn" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
                     <FaInstagram size={18} /> Instagram
                   </a>
                 </div>
@@ -97,6 +96,7 @@ const About = () => {
                          <li>Organized workshops, events, and awareness sessions on AI and productivity tools.</li>
                          <li>Collaborated with students to encourage learning and innovation in technology.</li>
                        </ul>
+                       <a href="/assets/gsa_2026.pdf" target="_blank" rel="noopener noreferrer" className="cert-link">View Confirmation Mail &rarr;</a>
                     </div>
                  </div>
                  <div className="timeline-entry">
@@ -107,6 +107,7 @@ const About = () => {
                        <ul className="achievement-list">
                          <li>Secured a position in the Top 20 teams at CosmoHack 1.0 for innovation and teamwork.</li>
                        </ul>
+                       <a href="/assets/cosmohack_cert.png" target="_blank" rel="noopener noreferrer" className="cert-link">View Certificate &rarr;</a>
                     </div>
                  </div>
                  <div className="timeline-entry">
@@ -117,6 +118,7 @@ const About = () => {
                        <ul className="achievement-list">
                          <li>Participated in Nexathon 1.0 organized by the Department of CSE-AI, showcasing creativity, innovation, and teamwork.</li>
                        </ul>
+                       <a href="/assets/nexathon_cert.png" target="_blank" rel="noopener noreferrer" className="cert-link">View Certificate &rarr;</a>
                     </div>
                  </div>
               </div>
@@ -148,6 +150,9 @@ const About = () => {
                   <span className="software-tag" style={{background: 'var(--accent-color)', color: '#000'}}>Express.js</span>
                   <span className="software-tag" style={{background: 'var(--accent-color)', color: '#000'}}>Spring Boot</span>
                   <span className="software-tag" style={{background: 'var(--accent-color)', color: '#000'}}>Bootstrap</span>
+                  <span className="software-tag" style={{background: 'var(--accent-color)', color: '#000'}}>Tailwind CSS</span>
+
+                  
                 </div>
               </div>
 
@@ -169,6 +174,9 @@ const About = () => {
                   <span className="software-tag" style={{background: '#ef4444', color: '#fff'}}>Docker</span>
                   <span className="software-tag" style={{background: '#ef4444', color: '#fff'}}>Kubernetes</span>
                   <span className="software-tag" style={{background: '#ef4444', color: '#fff'}}>Postman</span>
+                  <span className="software-tag" style={{background: '#ef4444', color: '#fff'}}>Vercel</span>
+                  <span className="software-tag" style={{background: '#ef4444', color: '#fff'}}>Netlify</span>
+                  
                 </div>
               </div>
 

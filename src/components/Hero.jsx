@@ -15,7 +15,7 @@ const Hero = () => {
 
         <div className="hero-image-wrapper">
           <img
-            src="/assets/hero_coding_avatar.png"
+            src="/assets/hero_coding_avatar_v2.png"
             alt="Rohit Portrait"
             className="hero-image"
           />

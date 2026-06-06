@@ -34,6 +34,23 @@ const projectsData = [
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
     github: 'https://github.com/rohitmandal2004/Streamify',
     website: 'https://streamifyfrontend.onrender.com/'
+  },
+  {
+    id: 3,
+    title: 'PORTFOLIO',
+    category: 'FRONTEND',
+    color: '#3b82f6',
+    date: 'May 2026 - Jun 2026',
+    image: '/assets/Portfolio_landingPage.png',
+    description: 'Personal Developer Portfolio',
+    bullets: [
+      'Designed and developed a highly interactive personal portfolio featuring a modern Neo-Brutalist aesthetic.',
+      'Implemented custom dark/light theme switching, responsive layouts, and dynamic micro-animations.',
+      'Built entirely with React and Vite, utilizing custom CSS variables for seamless theme adaptation.'
+    ],
+    tech: ['React', 'Vite', 'CSS', 'Lucide React'],
+    github: 'https://github.com/rohitmandal2004/Portfolio',
+    website: 'https://portfolio-delta-eight-1blbnusv3w.vercel.app/'
   }
 ];
 
