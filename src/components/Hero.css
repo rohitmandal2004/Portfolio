@@ -58,7 +58,7 @@
 
 .hero-subtitle {
   font-family: 'Fredoka One', cursive;
-  font-size: 2.5rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #FF6B6B;
@@ -66,7 +66,8 @@
   padding: 0.5rem 1.5rem;
   border: 4px solid var(--text-primary);
   box-shadow: 6px 6px 0 var(--text-primary);
-  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
   transform: rotate(-2deg);
   letter-spacing: 2px;
 }
@@ -74,17 +75,6 @@
 body.dark-theme .hero-subtitle {
   color: #000;
 }
-
-.floating-icon {
-  position: absolute;
-  font-size: 3rem;
-  filter: grayscale(100%);
-  opacity: 0.8;
-}
-
-.icon-1 { top: -20px; left: 60%; transform: rotate(15deg); }
-.icon-2 { bottom: 10%; left: -20px; transform: rotate(-15deg); }
-.icon-3 { bottom: 30%; right: -50px; transform: rotate(10deg); }
 
 .hero-image-wrapper {
   position: relative;
@@ -127,19 +117,14 @@ body.dark-theme .hero-subtitle {
 
 @media (max-width: 1024px) {
   .poster-title { font-size: 7rem; }
-  .hero-subtitle { font-size: 2rem; }
+  .hero-subtitle { font-size: 1.1rem; }
   .hero-container { flex-direction: column; text-align: center; }
   .hero-image-wrapper { margin-top: 4rem; width: 100%; max-width: 400px; }
-  .icon-3 { right: 0; }
 }
 
 @media (max-width: 768px) {
   .poster-title { font-size: 5rem; line-height: 1; margin-top: 1rem; }
-  .hero-subtitle { font-size: 1.5rem; margin-bottom: 1rem; }
+  .hero-subtitle { font-size: 0.9rem; margin-bottom: 1rem; }
   .hero-image-wrapper { max-width: 100%; margin-top: 3rem; }
-  .floating-icon { font-size: 2rem; }
-  .icon-1 { left: 80%; top: -10px; }
-  .icon-2 { left: 0; bottom: 5%; }
-  .icon-3 { right: -10px; bottom: 20%; }
   .hero-typography { margin-top: 2rem; }
 }

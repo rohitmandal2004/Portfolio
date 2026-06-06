@@ -16,7 +16,7 @@ const About = () => {
           {/* Left Column */}
           <div className="profile-left brutal-reveal-hidden">
             <div className="profile-image-container">
-               <img src="/assets/avatar_ai.png" alt="Working" className="profile-image" />
+               <img src="/assets/cartoon_avatar_hello.png" alt="Working" className="profile-image" />
             </div>
             
             <div className="contact-card">
