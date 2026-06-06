@@ -10,6 +10,18 @@ import useScrollReveal from './hooks/useScrollReveal';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [greetingIndex, setGreetingIndex] = useState(0);
+  const greetings = ["HELLO", "नमस्ते", "নমস্কার"];
+
+  // Cycle through greetings
+  useEffect(() => {
+    if (greetingIndex < greetings.length - 1) {
+      const timer = setTimeout(() => {
+        setGreetingIndex(prev => prev + 1);
+      }, 700);
+      return () => clearTimeout(timer);
+    }
+  }, [greetingIndex]);
 
   // Initialize scroll animations
   useScrollReveal();
@@ -31,7 +43,7 @@ function App() {
       <div className="reveal-layer layer-1"></div>
       <div className="reveal-layer layer-2"></div>
       <div className="reveal-layer layer-3">
-        <h1 className="reveal-text">ROHIT MANDAL</h1>
+        <h1 key={greetingIndex} className="reveal-text">{greetings[greetingIndex]}</h1>
       </div>
       
       <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
