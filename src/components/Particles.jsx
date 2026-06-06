@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './Particles.css';
 
 const Particles = () => {
-  const [particles, setParticles] = useState([]);
-
-  useEffect(() => {
-    // Generate 30 random particles
-    const newParticles = Array.from({ length: 30 }).map((_, i) => ({
+  const [particles] = useState(() => {
+    return Array.from({ length: 30 }).map((_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
@@ -14,8 +11,7 @@ const Particles = () => {
       duration: Math.random() * 20 + 10,
       delay: Math.random() * 5,
     }));
-    setParticles(newParticles);
-  }, []);
+  });
 
   return (
     <div className="particles-container">

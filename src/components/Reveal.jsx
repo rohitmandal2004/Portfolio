@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './Reveal.css';
 
 const Reveal = ({ children, direction = 'up', delay = 0 }) => {
@@ -20,12 +20,13 @@ const Reveal = ({ children, direction = 'up', delay = 0 }) => {
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      if (currentRef) observer.unobserve(currentRef);
     };
   }, []);
 

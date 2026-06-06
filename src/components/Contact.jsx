@@ -1,4 +1,3 @@
-import React from 'react';
 import './Contact.css';
 
 const Contact = () => {
@@ -23,7 +22,7 @@ const Contact = () => {
           </div>
           
           <div className="contact-right brutal-reveal-hidden delay-1">
-            <form className="neo-form" action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST">
+            <form className="neo-form" action="mailto:rohitmandal0804@gmail.com" method="POST" encType="text/plain">
                <div className="form-group">
                  <label>Your Name</label>
                  <input type="text" name="name" placeholder="John Doe" required />
