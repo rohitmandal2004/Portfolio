@@ -89,7 +89,7 @@ const Projects = () => {
 
                  <div style={{display: 'flex', gap: '1rem', marginTop: 'auto'}}>
                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="neo-link-btn">GITHUB</a>
-                   <a href={project.website} target="_blank" rel="noopener noreferrer" className="neo-link-btn" style={{backgroundColor: '#fff'}}>WEBSITE</a>
+                   <a href={project.website} target="_blank" rel="noopener noreferrer" className="neo-link-btn" style={{backgroundColor: 'var(--bg-color)'}}>WEBSITE</a>
                  </div>
               </div>
             </div>

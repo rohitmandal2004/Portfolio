@@ -27,7 +27,7 @@
 
 .star {
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--bg-color);
 }
 
 @keyframes scrollMarquee {
