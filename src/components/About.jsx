@@ -1,4 +1,6 @@
 import './About.css';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const About = () => {
   return (
@@ -25,17 +27,18 @@ const About = () => {
               </div>
               <div className="contact-info">
                 <h3>Let's Work Together :</h3>
-                <p>✉️ rohitmandal0804@gmail.com</p>
-                <p>📞 +91 9378093270</p>
-                <div className="social-buttons">
-                  <a href="https://github.com/rohitmandal2004" target="_blank" rel="noopener noreferrer" className="social-btn github-btn">
-                    💻 GitHub
+                <p style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><MapPin size={18} /> Basirhat, West Bengal</p>
+                <p style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Mail size={18} /> rohitmandal0804@gmail.com</p>
+                <p style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Phone size={18} /> +91 9378093270</p>
+                <div className="social-buttons" style={{ marginTop: '1rem' }}>
+                  <a href="https://github.com/rohitmandal2004" target="_blank" rel="noopener noreferrer" className="social-btn github-btn" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
+                    <FaGithub size={18} /> GitHub
                   </a>
-                  <a href="https://www.linkedin.com/in/mandal-rohit/" target="_blank" rel="noopener noreferrer" className="social-btn linkedin-btn">
-                    💼 LinkedIn
+                  <a href="https://www.linkedin.com/in/mandal-rohit/" target="_blank" rel="noopener noreferrer" className="social-btn linkedin-btn" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
+                    <FaLinkedin size={18} /> LinkedIn
                   </a>
-                  <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="social-btn instagram-btn">
-                    📸 Instagram
+                  <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="social-btn instagram-btn" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
+                    <FaInstagram size={18} /> Instagram
                   </a>
                 </div>
               </div>
