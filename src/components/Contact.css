@@ -59,7 +59,18 @@
   border-radius: 8px;
   outline: none;
   background-color: var(--bg-color);
+  color: var(--text-primary) !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
   transition: box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder,
+.form-group input::-webkit-input-placeholder,
+.form-group textarea::-webkit-input-placeholder {
+  color: var(--text-secondary) !important;
+  -webkit-text-fill-color: var(--text-secondary) !important;
+  opacity: 1 !important;
 }
 
 .form-group input:focus,

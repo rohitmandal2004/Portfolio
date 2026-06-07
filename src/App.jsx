@@ -34,7 +34,21 @@ function App() {
     }
   }, [isDarkMode]);
 
-  const toggleTheme = () => setIsDarkMode(!isDarkMode);
+  const toggleTheme = () => {
+    if (!document.startViewTransition) {
+      setIsDarkMode(!isDarkMode);
+      return;
+    }
+
+    document.documentElement.classList.add('theme-transitioning');
+    const transition = document.startViewTransition(() => {
+      setIsDarkMode(!isDarkMode);
+    });
+
+    transition.finished.finally(() => {
+      document.documentElement.classList.remove('theme-transitioning');
+    });
+  };
 
   return (
     <div className="app">
