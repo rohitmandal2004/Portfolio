@@ -1,13 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Cursor.css';
 
 const Cursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
+  const cursorRef = useRef(null);
 
   useEffect(() => {
+    const cursor = cursorRef.current;
+    if (!cursor) return;
+
+    let cursorX = 0;
+    let cursorY = 0;
+    let isHovering = false;
+    let animationFrameId;
+
     const updatePosition = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      cursorX = e.clientX;
+      cursorY = e.clientY;
+      
+      // Use requestAnimationFrame for buttery smooth 60fps/144fps updates
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+      
+      animationFrameId = requestAnimationFrame(() => {
+        cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+      });
     };
     
     const handleMouseOver = (e) => {
@@ -21,28 +38,35 @@ const Cursor = () => {
         target.classList.contains('neo-project-card') ||
         target.classList.contains('software-tag')
       ) {
-        setIsHovering(true);
+        if (!isHovering) {
+          isHovering = true;
+          cursor.classList.add('hovering');
+        }
       } else {
-        setIsHovering(false);
+        if (isHovering) {
+          isHovering = false;
+          cursor.classList.remove('hovering');
+        }
       }
     };
 
-    window.addEventListener('mousemove', updatePosition);
-    window.addEventListener('mouseover', handleMouseOver);
+    window.addEventListener('mousemove', updatePosition, { passive: true });
+    window.addEventListener('mouseover', handleMouseOver, { passive: true });
 
     return () => {
       window.removeEventListener('mousemove', updatePosition);
       window.removeEventListener('mouseover', handleMouseOver);
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
     };
   }, []);
 
   return (
     <div 
-      className={`neo-cursor ${isHovering ? 'hovering' : ''}`}
-      style={{
-        left: `${position.x}px`,
-        top: `${position.y}px`
-      }}
+      ref={cursorRef}
+      className="neo-cursor"
+      style={{ top: 0, left: 0 }}
     />
   );
 };

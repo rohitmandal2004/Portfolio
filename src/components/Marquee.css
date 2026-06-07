@@ -14,6 +14,7 @@
 .marquee-content {
   display: flex;
   animation: scrollMarquee 15s linear infinite;
+  will-change: transform;
 }
 
 .marquee-text {
@@ -31,8 +32,8 @@
 }
 
 @keyframes scrollMarquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
 }
 
 @media (max-width: 768px) {

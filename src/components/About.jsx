@@ -84,6 +84,38 @@ const About = () => {
             </div>
 
             <div className="resume-section">
+              <h3 className="sub-heading">Experience</h3>
+              <div className="experience-cards">
+                 <div className="neo-exp-card" style={{ '--card-color': '#fdb913' }}>
+                    <div className="exp-header">
+                       <h4>Google Campus Ambassador</h4>
+                       <span className="exp-date">May 2026 - Present</span>
+                    </div>
+                    <p className="company">Google</p>
+                    <ul className="achievement-list">
+                      <li>Promoted Google Gemini and AI tools within the campus community.</li>
+                      <li>Organized workshops, events, and awareness sessions on AI and productivity tools.</li>
+                      <li>Collaborated with students to encourage learning and innovation in technology.</li>
+                    </ul>
+                    <a href="/assets/gsa_2026.pdf" target="_blank" rel="noopener noreferrer" className="cert-link" style={{marginTop: '1rem'}}>View Confirmation Mail &rarr;</a>
+                 </div>
+
+                 <div className="neo-exp-card" style={{ '--card-color': '#3b82f6' }}>
+                    <div className="exp-header">
+                       <h4>AI & Cloud Computing Intern</h4>
+                       <span className="exp-date">Jun 2025 - Jul 2025</span>
+                    </div>
+                    <p className="company">Edunet Foundation (IBM SkillsBuild)</p>
+                    <ul className="achievement-list">
+                      <li>Completed an intensive program focusing on Artificial Intelligence and Cloud Computing technologies.</li>
+                      <li>Gained hands-on experience with IBM Cloud services and implemented AI-based solutions.</li>
+                      <li>Collaborated on projects to build scalable and intelligent applications.</li>
+                    </ul>
+                 </div>
+              </div>
+            </div>
+
+            <div className="resume-section">
               <h3 className="sub-heading">Achievements</h3>
               <div className="timeline-container">
                  <div className="timeline-entry">
@@ -151,8 +183,6 @@ const About = () => {
                   <span className="software-tag" style={{background: 'var(--accent-color)', color: '#000'}}>Spring Boot</span>
                   <span className="software-tag" style={{background: 'var(--accent-color)', color: '#000'}}>Bootstrap</span>
                   <span className="software-tag" style={{background: 'var(--accent-color)', color: '#000'}}>Tailwind CSS</span>
-
-                  
                 </div>
               </div>
 
@@ -176,20 +206,17 @@ const About = () => {
                   <span className="software-tag" style={{background: '#ef4444', color: '#fff'}}>Postman</span>
                   <span className="software-tag" style={{background: '#ef4444', color: '#fff'}}>Vercel</span>
                   <span className="software-tag" style={{background: '#ef4444', color: '#fff'}}>Netlify</span>
-                  
                 </div>
               </div>
 
               <div className="skill-category">
-                <h4> Languages</h4>
+                <h4>Languages</h4>
                 <div className="software-tags">
-                  
                   <span className="software-tag" style={{background: '#8b5cf6', color: '#fff'}}>English</span>
                   <span className="software-tag" style={{background: '#8b5cf6', color: '#fff'}}>Hindi</span>
                   <span className="software-tag" style={{background: '#8b5cf6', color: '#fff'}}>Bengali</span>
                 </div>
               </div>
-
             </div>
 
           </div>
