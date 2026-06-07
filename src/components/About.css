@@ -409,4 +409,18 @@ body.dark-theme .neo-exp-card {
   .qr-placeholder { margin: 0 auto; }
   .timeline-container { padding-left: 1rem; }
   .timeline-dot { left: -1rem; }
+  
+  /* Fix Experience cards overflow on mobile */
+  .exp-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .neo-exp-card {
+    padding: 1rem;
+    box-shadow: 4px 4px 0 var(--card-color, var(--accent-color));
+  }
+  .neo-exp-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--card-color, var(--accent-color));
+  }
 }
