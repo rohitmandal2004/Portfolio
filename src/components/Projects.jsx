@@ -4,6 +4,23 @@ import { Rocket } from 'lucide-react';
 
 const projectsData = [
   {
+    id: 4,
+    title: 'NUTRIBOT',
+    category: 'AI APP',
+    color: '#10b981',
+    date: 'Jul 2026 - Present',
+    image: '/assets/NutriBot.png',
+    description: 'AI-Powered Nutrition Agent',
+    bullets: [
+      'Developed an intelligent nutrition assistant utilizing IBM watsonx.ai Granite for personalized meal plans and analysis.',
+      'Created an interactive chat interface for real-time dietary recommendations and healthy food suggestions.',
+      'Implemented a comprehensive dashboard featuring BMI/TDEE calculators and user profile management.'
+    ],
+    tech: ['JavaScript', 'Python', 'Flask', 'IBM Watsonx.ai', 'SQLite'],
+    github: 'https://github.com/rohitmandal2004/Nutrition-Agent',
+    website: 'https://nutrition-agent-nine.vercel.app/'
+  },
+  {
     id: 1,
     title: 'STUDY FLOW',
     category: 'MERN STACK',
